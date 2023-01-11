@@ -28,11 +28,12 @@ For this walkthrough, you need the following:
 - A Gitlab Container Registry. 
 - A [Git client](https://git-scm.com/downloads) to clone the source code provided.
 - An AWS account with local credentials properly configured (typically under ~/.aws/credentials).
+- Make sure the IAM user have the required permissions.
 - The latest version of the AWS CLI. For more information, see [Installing, updating, and uninstalling the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html).
 - Docker is installed and running on the localhost/laptop.
 - Nodejs and npm installed on the localhost/laptop. 
 - A VPC with 2 private subnets and that is connected to the internet via NAT gateway allowing outbound traffic.  
-- The following IAM service-linked role created in the AWS account: AWSServiceRoleForAutoScaling
+- The following IAM service-linked role created in the AWS account: AWSServiceRoleForAutoScaling - if not available, create a temporary autoscaling group, it will create the role dynamically.
 - An S3 bucket for storing Lambda deployment packages. 
 - Familiarity with Git, Gitlab CI/CD, Docker, EC2, and CloudFormation.
 
